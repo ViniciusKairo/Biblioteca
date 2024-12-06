@@ -1,0 +1,84 @@
+/* Cabeçalho */
+.header {
+  background-color: #333; /* Cor de fundo do cabeçalho */
+  padding: 15px 0;
+  text-align: center; /* Centraliza o menu */
+}
+
+/* Menu principal */
+.nav-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centraliza os itens */
+}
+
+.nav-menu li {
+  position: relative; /* Necessário para posicionar o dropdown */
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Links principais */
+.nav-menu a, .nav-menu span {
+  color: rgb(10, 10, 10); /* Cor do texto e ícones */
+  text-decoration: none; /* Remove o sublinhado */
+  font-size: 18px;
+  display: flex;
+  align-items: center; /* Alinha os ícones e o texto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves para cor e escala */
+}
+
+.nav-menu a svg {
+  margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+  font-size: 20px; /* Tamanho dos ícones */
+  transition: transform 0.3s ease; /* Efeito de transição para o ícone */
+}
+
+/* Hover nos links principais */
+.nav-menu a:hover, .nav-menu span:hover {
+  color: #f39c12; /* Cor do texto e ícones quando o usuário passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho do link */
+}
+
+.nav-menu a:hover svg, .nav-menu span:hover svg {
+  color: #f39c12; /* Cor do ícone quando passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho do ícone */
+}
+
+/* Dropdown */
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block; /* Mostra o submenu ao passar o mouse */
+}
+
+.nav-menu .dropdown-menu {
+  display: none; /* Submenu oculto por padrão */
+  position: absolute;
+  top: 100%; /* Abaixo do menu principal */
+  left: 0;
+  background-color: #444; /* Cor de fundo do submenu */
+  list-style-type: none;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar o submenu */
+  border-radius: 4px; /* Bordas arredondadas */
+  min-width: 150px; /* Largura mínima para o submenu */
+  text-align: left;
+}
+
+/* Itens do dropdown */
+.nav-menu .dropdown-menu li {
+  margin: 0;
+}
+
+.nav-menu .dropdown-menu a {
+  color: rgb(8, 8, 8); /* Cor dos links no submenu */
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.nav-menu .dropdown-menu a:hover {
+  background-color: #555; /* Cor de fundo ao passar o mouse no submenu */
+}
